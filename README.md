@@ -5,10 +5,10 @@
 
 - [] Criar a Camada Model, repository, controler, service das Tabela Categoria,Produto,User,UserLogin, Comerciante e doação.
 - [] Criar Camada de Security,BasicSecurityConfig, UserDetailsServiceImpl, UserDetailsServiceImpl.
-- [x] Criar as camadas controller e repository teste JUnit.
-- [x] Configurar os application.properties e adicionado as applications Dev.properties e prod.properties na pasta src/main/resources para o deploy no heroku.
-- [x] Criar a camada swaggerConfiguration para o deploy no heroku. 
-- [x] Executar os testes no Insomnia tanto em Dev como em Prod.             
+- [] Criar as camadas controller e repository teste JUnit.
+- [] Configurar os application.properties e adicionado as applications Dev.properties e prod.properties na pasta src/main/resources para o deploy no heroku.
+- [] Criar a camada swaggerConfiguration para o deploy no heroku. 
+- [] Executar os testes no Insomnia tanto em Dev como em Prod.             
 
  
  
@@ -78,6 +78,23 @@ class UserLogin{
   - tipo : VARCHAR(255)
   - senha :VARCHAR(255)
   - cep: VARCHAR(255)
+}
+
+class Comerciante {
+  - id : Long
+  - nome : VARCHAR(255)
+  - usuario :  VARCHAR(255)
+  - senha :  VARCHAR(255)
+  - foto :  VARCHAR(255)
+  - tipo : VARCHAR(255)
+  - senha :VARCHAR(255)
+  - cep: VARCHAR(255)
+  - produto : List ~Produto~
+  + getAll()
+  + getById(Long id)
+  + autenticarUser(UserLogin userLogin)
+  + cadastrarUser(User user)
+  + atualizarUser(User User)
 }
 Categoria --> Produto
 User --> Produto
