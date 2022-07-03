@@ -22,9 +22,9 @@ DER: Modelo de Entidade-Relacionamento :
 classDiagram
 class Categoria{
   - id : Long
-  - nome : VARCHAR(255)
-  - tipo: BOOLEAN
-  - foto: VARCHAR(255)
+  - nome : String(255)
+  - tipo: boolean
+  - foto: String(255)
   - produto : List ~Produto~
   + getAll()
   + getById(Long id)
@@ -35,14 +35,14 @@ class Categoria{
 }
 class Produto {
   - id : Long
-  - nome : VARCHAR(255)
-  - quantidade: INT
-  - descrição: VARCHAR(500)
-  - preco : INT
-  - foto :VARCHAR(255)
-  - peso : DECIMAL
-  - perecivel: BOOLEAN
-  - ativo: BOOLEAN
+  - nome : String(255)
+  - quantidade: int
+  - descrição: String(500)
+  - preco : int
+  - foto :String(255)
+  - peso : decimal
+  - perecivel: boolean
+  - ativo: boolean
   - dataFabricacao:VARCHAR(255)
   - dataValidade:VARCHAR(255)
   + getAll()
@@ -55,13 +55,13 @@ class Produto {
 }
 class User {
   - id : Long
-  - nome : VARCHAR(255)
-  - usuario :  VARCHAR(255)
-  - senha :  VARCHAR(255)
-  - foto :  VARCHAR(255)
-  - tipo : VARCHAR(255)
-  - senha :VARCHAR(255)
-  - cep: VARCHAR(255)
+  - nome : String(255)
+  - usuario :  String(255)
+  - senha :  String(255)
+  - foto :  String(255)
+  - tipo : String(255)
+  - senha :String(255)
+  - cep: String(255)
   - produto : List ~Produto~
   + getAll()
   + getById(Long id)
@@ -71,24 +71,24 @@ class User {
 }
 class UserLogin{
  - id : Long
-  - nome : VARCHAR(255)
-  - usuario :  VARCHAR(255)
-  - senha :  VARCHAR(255)
-  - foto :  VARCHAR(255)
-  - tipo : VARCHAR(255)
-  - senha :VARCHAR(255)
-  - cep: VARCHAR(255)
+  - nome : String(255)
+  - usuario :  String(255)
+  - senha :  String(255)
+  - foto :  String(255)
+  - tipo : String(255)
+  - senha :String(255)
+  - cep: String(255)
 }
 
 class Comerciante {
   - id : Long
-  - nome : VARCHAR(255)
-  - usuario :  VARCHAR(255)
-  - senha :  VARCHAR(255)
-  - foto :  VARCHAR(255)
-  - nomeComercio : VARCHAR(255)
-  - cnpj :VARCHAR(255)
-  - cep: VARCHAR(255)
+  - nome : String(255)
+  - usuario :  String(255)
+  - senha :  String(255)
+  - foto :  String(255)
+  - nomeComercio : String(255)
+  - cnpj :String(255)
+  - cep: String(255)
   - produto : List ~Produto~
   + getAll()
   + getById(Long id)
@@ -99,15 +99,15 @@ class Comerciante {
 
 class Doacao {
   - id : Long
-  - nome : VARCHAR(255)
-  - quantidade: INT
-  - descrição: VARCHAR(500)
-  - foto :VARCHAR(255)
-  - peso : DECIMAL
-  - perecivel: BOOLEAN
-  - ativo: BOOLEAN
-  - dataFabricacao:VARCHAR(255)
-  - dataValidade:VARCHAR(255)
+  - nome : String(255)
+  - quantidade: int
+  - descrição: String(500)
+  - foto :String(255)
+  - peso : decimal
+  - perecivel: boolean
+  - ativo: boolean
+  - dataFabricacao:String(255)
+  - dataValidade:String(255)
   + getAll()
   + getById(Long id)
   + getBynome(String nome)
